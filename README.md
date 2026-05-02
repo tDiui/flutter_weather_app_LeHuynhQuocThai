@@ -1,17 +1,40 @@
-# weatherapp
+    Weather App (Flutter)
+    Ứng dụng Weather App được xây dựng bằng Flutter, cho phép người dùng tìm kiếm và hiển thị thông tin thời tiết theo thời gian thực thông qua API của OpenWeatherMap.
 
-A new Flutter project.
+    Tính năng chính
+    Tìm kiếm thời tiết theo tên thành phố
+    Hiển thị nhiệt độ hiện tại
+    Hiển thị mô tả thời tiết (nắng, mưa, mây...)
+    Hiển thị trạng thái loading khi đang gọi API
+    Hiển thị thông báo lỗi khi không lấy được dữ liệu
+    Cập nhật UI tự động với Provider
 
-## Getting Started
+    Project được tổ chức theo mô hình tách biệt rõ ràng:
+        lib/
+        │── models/           # Định nghĩa dữ liệu (WeatherModel)
+        │── services/         # Gọi API (WeatherService)
+        │── providers/        # Quản lý state (WeatherProvider)
+        │── screens/          # Giao diện chính (HomeScreen)
+        │── widgets/          # Các UI component tái sử dụng
+        │── config/           # Cấu hình (API key)
 
-This project is a starting point for a Flutter application.
+    Công nghệ sử dụng
+    Flutter
+    Provider (State Management)
+    HTTP (REST API)
+    OpenWeatherMap API
+    Dart JSON (dart:convert)
 
-A few resources to get you started if this is your first Flutter project:
+    Luồng hoạt động
+    Người dùng nhập tên thành phố
+    Nhấn nút Search
+    UI gọi fetchWeather() trong Provider
+    Provider gọi WeatherService để lấy dữ liệu từ API
+    API trả về JSON
+    JSON được chuyển thành WeatherModel
+    Provider cập nhật state
+    UI hiển thị kết quả
+![img_1.png](img_1.png)
+![img.png](img.png)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+LeHuynhQuocThai_2224802010031
